@@ -2,8 +2,8 @@
 var Snag = function(){
     this.wordsObj = {};
     this.categoryCounts = {
-        'spam': 0,
-        'ham': 0
+        'Spam': 0,
+        'Nonspam': 0
     };
     this.strength = 1;
     this.PrC = 0.5;
@@ -65,7 +65,7 @@ Snag.prototype = {
         }, this);
         
         //console.log(wordProb);        
-        //console.log(cWordProb);        
+        console.log(cWordProb);        
         var highest = _.reduce(cWordProb, function(max, prob, cat) {
           return max.prob > prob ? max : {cat: cat, prob: prob};
         }, {prob: 0});
